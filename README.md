@@ -7,7 +7,7 @@
 
 ---
 
-In this demo, NeuralAgent was given the following prompt:
+In this demo, NeuralAgent was given the following prompt:\n
 "I am selling AI Software for dentists, generate a lead list of 10 dentists in the United States who are suitable to be early adopters via Sales Navigator, then write them on Google Sheets, let's go!", it took care of the rest!
 
 ![Demo](docs/images/demo.gif)

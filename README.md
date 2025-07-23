@@ -167,6 +167,15 @@ REACT_APP_API_KEY=
 cd ..
 ```
 
+5. **Set up the local AI agent daemon (Python service):**
+```bash
+cd aiagent
+python -m venv venv
+source venv/bin/activate  # Or use `venv\Scripts\activate` on Windows
+pip install -r requirements.txt
+deactivate
+```
+
 5. **Start the Electron desktop app:**
 
 ```bash

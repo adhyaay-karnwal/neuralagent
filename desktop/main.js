@@ -202,7 +202,7 @@ ipcMain.on('launch-ai-agent', async (_, baseURL, threadId, backgroundMode) => {
   store.set(constants.LAST_BACKGROUND_MODE_VALUE, backgroundMode.toString());
 
   if (!backgroundMode) {
-    aiagentProcess = spawn('./aiagent/venv/Scripts/python', ['./aiagent/main.py'], {
+    aiagentProcess = spawn(isWindows ? './aiagent/venv/Scripts/python' : './aiagent/venv/bin/python', ['./aiagent/main.py'], {
       env: {
         NEURALAGENT_API_URL: baseURL,
         NEURALAGENT_THREAD_ID: threadId,

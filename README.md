@@ -176,7 +176,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-5. **Start the Electron desktop app:**
+6. **Start the Electron desktop app:**
 
 ```bash
 npm start

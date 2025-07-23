@@ -11,15 +11,21 @@
 
 ---
 
+## 🌐 Website & Community
+
+- 🌍 **Website**: [https://neuralagent.ai](https://www.getneuralagent.com)
+- 💬 **Discord**: [Join NeuralAgent Discord](https://discord.gg/eGyW3kPcUs)
+
+---
+
 ## 🚀 Features
 
 - ✅ Desktop automation with `pyautogui`
-- ✅ Background automation via WSL (browser-only)
+- ✅ Background automation (Windows Only For Now) via WSL (browser-only).
 - ✅ Supports Claude, GPT-4, Azure OpenAI, and Bedrock
 - ✅ Modular agents: Planner, Classifier, Suggestor, Title, and more
 - ✅ Multimodal (text + vision)
 - ✅ FastAPI backend + Electron + React frontend
-- ✅ Ready for finetuning and self-hosted distillation
 
 ---
 

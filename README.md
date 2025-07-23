@@ -1,9 +1,13 @@
 
-# 🧠 NeuralAgent
+![NeuralAgent](docs/images/neuralagent_logo.png)
 
 **NeuralAgent** is your AI personal assistant that actually *gets things done*. It lives on your desktop, types, clicks, navigates the browser, fills out forms, sends emails, and performs tasks automatically using modern large language models — all powered by a fast, extensible, and open architecture.
 
 > Real productivity. Not just conversation.
+
+---
+
+![Demo](docs/images/demo.gif)
 
 ---
 

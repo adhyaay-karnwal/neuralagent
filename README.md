@@ -36,6 +36,7 @@ neuralagent/
 ├── backend/              # FastAPI + Postgres backend
 ├── desktop/              # ElectronJS desktop app
 │   └── neuralagent-app/  # React frontend inside Electron
+│   └── aiagent/          # Python code (pyautogui)
 └── README.md
 ```
 

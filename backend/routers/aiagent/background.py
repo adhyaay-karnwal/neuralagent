@@ -1,22 +1,17 @@
 from fastapi import APIRouter, Depends, status
 from sqlmodel import Session, select, and_
 from db.database import get_session
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from utils import constants
-from botocore.config import Config
-from langchain_aws import ChatBedrockConverse
+from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate
 import json
 from utils import ai_prompts
-from utils.procedures import CustomError, extract_json, extract_json_array
+from utils.procedures import CustomError, extract_json
 from dependencies.auth_dependencies import get_current_user_dependency
 from db.models import (User, Thread, ThreadStatus, ThreadTask, ThreadTaskStatus, ThreadMessage,
                        ThreadChatType, ThreadChatFromChoices, ThreadTaskMemoryEntry)
 from schemas.aiagent import BackgroundNextStepRequest
 from utils.agentic_tools import run_tool_server_side
-from base64 import b64decode
-import io
-from utils import upload_helper
+from utils import llm_provider
 
 
 router = APIRouter(
@@ -46,35 +41,10 @@ def next_step(tid: str, next_step_req: BackgroundNextStepRequest, db: Session = 
     if not task:
         raise CustomError(status.HTTP_404_NOT_FOUND, 'Thread has no running task')
 
-    boto3_config = Config(
-        connect_timeout=300,
-        read_timeout=300,
-        retries={'max_attempts': 5},
-        region_name=constants.AWS_CLAUDE_SONNET_REGION
-    )
-    thinking_params = {
-        "thinking": {
-            "type": "enabled",
-            "budget_tokens": 2000
-        }
-    }
     if task.extended_thinking_mode is True:
-        llm = ChatBedrockConverse(
-            model=constants.AWS_CLAUDE_SONNET_MODEL_ID,
-            max_tokens=None,
-            temperature=1.0,
-            config=boto3_config,
-            region_name=constants.AWS_CLAUDE_SONNET_REGION,
-            additional_model_request_fields=thinking_params
-        )
+        llm = llm_provider.get_llm(agent='computer_use', temperature=1.0, thinking_enabled=True)
     else:
-        llm = ChatBedrockConverse(
-            model=constants.AWS_CLAUDE_SONNET_MODEL_ID,
-            max_tokens=None,
-            temperature=0.0,
-            config=boto3_config,
-            region_name=constants.AWS_CLAUDE_SONNET_REGION,
-        )
+        llm = llm_provider.get_llm(agent='computer_use', temperature=0.0)
 
     previous_tasks = db.exec(select(ThreadTask).where(and_(
         ThreadTask.thread.has(Thread.user_id == user.id),

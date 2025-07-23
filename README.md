@@ -179,6 +179,7 @@ deactivate
 6. **Start the Electron desktop app:**
 
 ```bash
+cd ..
 npm start
 ```
 

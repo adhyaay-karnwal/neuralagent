@@ -80,11 +80,15 @@ DB_PORT=
 DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
+
+# Not Needed, Just keep empty
 DB_CONNECTION_STRING=
 
 JWT_ISS=NeuralAgentBackend
+# Generate a Random String for the JWT_SECRET
 JWT_SECRET=
 
+# Keep Empty, for now!
 REDIS_CONNECTION=
 
 # Optional: For Bedrock
@@ -117,12 +121,13 @@ PLANNER_AGENT_MODEL_ID=gpt-4.1
 COMPUTER_USE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock
 COMPUTER_USE_AGENT_MODEL_ID=us.anthropic.claude-sonnet-4-20250514-v1:0
 
+# For Tracing, Keep false if you don't need langsmith tracing.
 LANGCHAIN_TRACING_V2=false
 LANGCHAIN_ENDPOINT=
 LANGCHAIN_API_KEY=
 LANGCHAIN_PROJECT=
 
-# Google Login
+# Optional for Google Login
 GOOGLE_LOGIN_CLIENT_ID=
 GOOGLE_LOGIN_CLIENT_SECRET=
 GOOGLE_LOGIN_DESKTOP_REDIRECT_URI=http://127.0.0.1:36478

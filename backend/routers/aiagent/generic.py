@@ -227,7 +227,7 @@ def next_step(tid: str, next_step_req: NextStepRequest, db: Session = Depends(ge
     screenshot_user_message_block = None
     screenshot_s3_path = None
     if next_step_req.screenshot_b64:
-        if os.getenv('SAVE_SCREENSHOT') == 'true':
+        if os.getenv('ENABLE_SCREENSHOT_LOGGING_FOR_TRAINING') == 'true':
             image_bytes = b64decode(next_step_req.screenshot_b64)
             image_io = io.BytesIO(image_bytes)
             screenshot_s3_path = upload_helper.upload_screenshot_s3_bytesio(image_io, extension="png")

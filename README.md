@@ -1,7 +1,7 @@
 
 [![NeuralAgent](docs/images/neuralagent_github_cover.jpg)](https://www.getneuralagent.com)
 
-**NeuralAgent** is your AI personal assistant that actually *gets things done*. It lives on your desktop, types, clicks, navigates the browser, fills out forms, sends emails, and performs tasks automatically using modern large language models — all powered by a fast, extensible, and open architecture.
+**NeuralAgent** is your AI personal assistant that actually *gets things done*. It lives on your desktop, types, clicks, navigates the browser, fills out forms, sends emails, and performs tasks automatically using modern large language models all powered by a fast, extensible, and open architecture.
 
 > Real productivity. Not just conversation.
 
@@ -56,7 +56,7 @@ neuralagent/
 
 ## ⚙️ Setup Instructions
 
-> 🧪 Open **two terminal windows** – one for `backend` and one for `desktop`.
+> 🧪 Open **two terminal windows** - one for `backend` and one for `desktop`.
 
 ---
 
@@ -226,7 +226,7 @@ We welcome pull requests and community contributions!
 ## 🛡️ License
 
 MIT License.  
-Use at your own risk. This tool moves your mouse and types on your behalf — test responsibly!
+Use at your own risk. This tool moves your mouse and types on your behalf, test responsibly!
 
 ---
 

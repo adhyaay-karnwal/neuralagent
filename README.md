@@ -130,7 +130,7 @@ COMPUTER_USE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock
 COMPUTER_USE_AGENT_MODEL_ID=us.anthropic.claude-sonnet-4-20250514-v1:0
 
 # IF True (Saves screenshots to DB), you need to provide AWS S3, along with AWS Key Id and Secret (Same as Bedrock)
-SAVE_SCREENSHOTS=false
+ENABLE_SCREENSHOT_LOGGING_FOR_TRAINING=false
 AWS_DEFAULT_REGION=us-east-1
 AWS_BUCKET=
 

@@ -40,7 +40,6 @@ def get_llm(agent: str, temperature: float = 0.0, max_tokens: int = None, thinki
     elif model_type == "openai":
         return ChatOpenAI(
             model=model_id,
-            openai_api_key=os.getenv("OPENAI_API_KEY"),
             temperature=temperature,
             max_tokens=max_tokens,
             timeout=None,
@@ -51,16 +50,18 @@ def get_llm(agent: str, temperature: float = 0.0, max_tokens: int = None, thinki
         if not thinking_enabled:
             return ChatAnthropic(
                 model=model_id,
-                anthropic_api_key=os.getenv("ANTHROPIC_API_KEY"),
                 temperature=temperature,
                 max_tokens=max_tokens,
+                timeout=None,
+                max_retries=2,
             )
         else:
             return ChatAnthropic(
                 model=model_id,
-                anthropic_api_key=os.getenv("ANTHROPIC_API_KEY"),
                 temperature=temperature,
                 max_tokens=max_tokens,
+                timeout=None,
+                max_retries=2,
                 thinking={"type": "enabled", "budget_tokens": 2000},
             )
 

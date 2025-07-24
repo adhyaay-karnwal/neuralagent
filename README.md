@@ -9,7 +9,7 @@
 
 [![Star NeuralAgent](https://img.shields.io/github/stars/withneural/neuralagent?style=social)](https://github.com/withneural/neuralagent/stargazers)
 
-> ⭐️ If you like this project, give it a star to support it!
+> 🧠 If NeuralAgent inspires or helps you, give it a star, it really helps!
 
 ---
 

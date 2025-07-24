@@ -293,7 +293,7 @@ def next_step(tid: str, next_step_req: NextStepRequest, db: Session = Depends(ge
     if len(action_history) > 0:
         computer_use_user_message.append({
             'type': 'text',
-            'text': f'Previous Actions: \n {json.dumps(action_history)}'
+            'text': f'Previous Actions (Limited to 5, newest first): \n {json.dumps(action_history)}'
         })
     if len(previous_subtasks_arr) > 0:
         computer_use_user_message.append({

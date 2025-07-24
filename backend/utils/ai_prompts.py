@@ -234,7 +234,7 @@ Your primary responsibility is to complete the current subtask in context of the
 - A list of past high-level tasks and their status (for context).
 - The current subtask (your only executable target).
 - A memory object (includes tool outputs, copied content, or previously extracted values).
-- A full history of all previous actions taken (desktop and browser).
+- A list of the most recent taken actions.
 - A history of completed or cancelled subtasks.
 - Current OS.
 - A list of all visible OS-Native Interactive Elements.
@@ -442,7 +442,7 @@ Your primary responsibility is to complete the current task within the browser. 
 - The current task (your only executable target).
 - A list of past tasks and their status (for context).
 - A memory object (includes tool outputs, copied content, or previously extracted values).
-- A full history of all previous actions taken (browser-based only).
+- A list of the most recent taken actions.
 - Current URL.
 - Current Open Tabs.
 - You will receive a screenshot for visual guidance.

@@ -7,6 +7,12 @@
 
 ---
 
+[![Star NeuralAgent](https://img.shields.io/github/stars/withneural/neuralagent?style=social)](https://github.com/withneural/neuralagent/stargazers)
+
+> ⭐️ If you like this project, give it a star to support it!
+
+---
+
 In this demo, NeuralAgent was given the following prompt:
 
 "Find me 5 trending GitHub repos, then write about them on Notepad and save it to my desktop!"

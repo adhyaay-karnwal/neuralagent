@@ -162,6 +162,7 @@ npm install
 
 ```bash
 cd neuralagent-app
+npm install
 ```
 
 3. **Copy `.env.example` to `.env` and fill in:**

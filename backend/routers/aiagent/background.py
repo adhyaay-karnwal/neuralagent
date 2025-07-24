@@ -12,6 +12,10 @@ from db.models import (User, Thread, ThreadStatus, ThreadTask, ThreadTaskStatus,
 from schemas.aiagent import BackgroundNextStepRequest
 from utils.agentic_tools import run_tool_server_side
 from utils import llm_provider
+from base64 import b64decode
+import io
+import os
+from utils import upload_helper
 
 
 router = APIRouter(
@@ -58,7 +62,13 @@ def next_step(tid: str, next_step_req: BackgroundNextStepRequest, db: Session = 
         })
 
     screenshot_user_message_block = None
+    screenshot_s3_path = None
     if next_step_req.screenshot_b64:
+        if os.getenv('SAVE_SCREENSHOT') == 'true':
+            image_bytes = b64decode(next_step_req.screenshot_b64)
+            image_io = io.BytesIO(image_bytes)
+            screenshot_s3_path = upload_helper.upload_screenshot_s3_bytesio(image_io, extension="png")
+        
         screenshot_user_message_block = {
             "type": "image",
             "source": {
@@ -138,6 +148,8 @@ def next_step(tid: str, next_step_req: BackgroundNextStepRequest, db: Session = 
             'text': f'Previous Tasks: \n {json.dumps(previous_tasks_arr)}'
         })
     
+    computer_use_text_prompt = computer_use_user_message.copy()
+    
     if screenshot_user_message_block:
         computer_use_user_message.append(screenshot_user_message_block)
 
@@ -175,6 +187,8 @@ def next_step(tid: str, next_step_req: BackgroundNextStepRequest, db: Session = 
         thread_task_id=task.id,
         thread_chat_type=ThreadChatType.BACKGROUND_MODE_BROWSER,
         thread_chat_from=ThreadChatFromChoices.FROM_AI,
+        screenshot=screenshot_s3_path,
+        prompt=json.dumps(computer_use_text_prompt),
         text=json.dumps(response_data),
     )
     db.add(ai_message)

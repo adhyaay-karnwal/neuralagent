@@ -240,7 +240,7 @@ def next_step(tid: str, next_step_req: NextStepRequest, db: Session = Depends(ge
                 ThreadMessage.thread_chat_type == ThreadChatType.DESKTOP_USE,
             )
         )
-        .order_by(ThreadMessage.created_at.desc())  # Adjust if your timestamp column is named differently
+        .order_by(ThreadMessage.created_at.desc())
         .limit(5)
     ).all()
     for previous_message in task_previous_messages:

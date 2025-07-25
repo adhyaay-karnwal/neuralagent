@@ -167,7 +167,7 @@ def focus_app(app_name):
 
 def take_screenshot_b64():
     with mss.mss() as sct:
-        monitor = sct.monitors[0]
+        monitor = sct.monitors[1]
         shot = sct.grab(monitor)
         img = Image.frombytes("RGB", shot.size, shot.bgra, "raw", "BGRX")
         img = img.resize((1280, 720))

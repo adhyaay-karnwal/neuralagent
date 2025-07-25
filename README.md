@@ -212,7 +212,7 @@ npm start
 
 ## 🤖 Agents & Model Providers
 
-You can configure different model providers (`OpenAI`, `Azure OpenAI`, `Anthropic`, `Bedrock`) per agent in `.env`.  
+You can configure different model providers (`OpenAI`, `Azure OpenAI`, `Anthropic`, `Bedrock`, `Ollama`) per agent in `.env`.  
 Agent types include:
 
 - `PLANNER_AGENT`

@@ -5,6 +5,7 @@ from botocore.config import Config
 from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_aws import ChatBedrockConverse
 from langchain_anthropic import ChatAnthropic
+from langchain_ollama import ChatOllama
 from langchain_core.language_models.chat_models import BaseChatModel
 
 load_dotenv()  # Load env variables from .env
@@ -64,6 +65,12 @@ def get_llm(agent: str, temperature: float = 0.0, max_tokens: int = None, thinki
                 max_retries=2,
                 thinking={"type": "enabled", "budget_tokens": 2000},
             )
+    
+    elif model_type == "ollama":
+        return ChatOllama(
+            model=model_id,
+            temperature=temperature
+        )
 
     elif model_type == "bedrock":
         thinking_params = {

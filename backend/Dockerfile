@@ -5,7 +5,7 @@ COPY . /app
 
 COPY requirements.txt /app/requirements.txt
 
-RUN apt-get update -y && apt-get install awscli -y
+RUN apt-get update -y
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 

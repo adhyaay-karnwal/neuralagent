@@ -1,7 +1,7 @@
 {
-  "name": "neuralagent-desktop",
-  "version": "1.5.2",
-  "description": "NeuralAgent Electron Desktop Application",
+  "name": "monarch-desktop",
+  "version": "2.0.0",
+  "description": "Monarch AI Desktop Agent - Your AI Assistant That Lives On Your Desktop",
   "license": "ISC",
   "author": "",
   "type": "module",
@@ -18,8 +18,8 @@
     "dev": "electron ."
   },
   "build": {
-    "appId": "com.getneuralagent.desktop",
-    "productName": "NeuralAgent",
+    "appId": "com.getmonarch.desktop",
+    "productName": "Monarch",
     "directories": {
       "buildResources": "assets",
       "output": "dist"

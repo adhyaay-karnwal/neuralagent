@@ -1,19 +1,18 @@
+[![Monarch](docs/images/monarch_github_cover.jpg)](https://www.getmonarch.ai)
 
-[![NeuralAgent](docs/images/neuralagent_github_cover.jpg)](https://www.getneuralagent.com)
-
-**NeuralAgent** is your AI personal assistant that actually *gets things done*. It lives on your desktop, types, clicks, navigates the browser, fills out forms, sends emails, and performs tasks automatically using modern large language models all powered by a fast, extensible, and open architecture. NeuralAgent uses your computer both in the foreground and the background.
+**Monarch** is your AI personal assistant that actually *gets things done*. It lives seamlessly on your desktop, types, clicks, navigates the browser, fills out forms, sends emails, and performs tasks automatically using modern large language models all powered by a fast, extensible, and open architecture. Monarch uses your computer both in the foreground and the background.
 
 > Real productivity. Not just conversation.
 
 ---
 
-[![Star NeuralAgent](https://img.shields.io/github/stars/withneural/neuralagent?style=social)](https://github.com/withneural/neuralagent/stargazers)
+[![Star Monarch](https://img.shields.io/github/stars/adhyaay-karnwal/neuralagent?style=social)](https://github.com/adhyaay-karnwal/neuralagent/stargazers)
 
-> ⭐️ If NeuralAgent inspires or helps you, give it a star!
+> ⭐️ If Monarch inspires or helps you, give it a star!
 
 ---
 
-In this demo, NeuralAgent was given the following prompt:
+In this demo, Monarch was given the following prompt:
 
 "Find me 5 trending GitHub repos, then write about them on Notepad and save it to my desktop!"
 
@@ -25,8 +24,8 @@ It took care of the rest!
 
 ## 🌐 Website & Community
 
-- 🌍 **Website**: [https://www.getneuralagent.com](https://www.getneuralagent.com)
-- 💬 **Discord**: [Join NeuralAgent Discord](https://discord.gg/eGyW3kPcUs)
+- 🌍 **Website**: [https://www.getmonarch.ai](https://www.getmonarch.ai)
+- 💬 **Discord**: [Join Monarch Discord](https://discord.gg/eGyW3kPcUs)
 
 ---
 
@@ -44,10 +43,10 @@ It took care of the rest!
 ## 🖥️ Project Structure
 
 ```
-neuralagent/
-├── backend/              # FastAPI + Postgres backend
+monarch/
+├── backend/              # FastAPI + Postgres backend (being removed)
 ├── desktop/              # ElectronJS desktop app
-│   └── neuralagent-app/  # React frontend inside Electron
+│   └── monarch-app/      # React frontend inside Electron
 │   └── aiagent/          # Python code (pyautogui)
 └── README.md
 ```

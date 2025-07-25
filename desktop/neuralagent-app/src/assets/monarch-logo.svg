@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .monarch-logo {
+        fill: white;
+        transform-origin: 32px 32px;
+      }
+      .monarch-logo.spinning {
+        animation: monarchSpin 2s linear infinite;
+      }
+      @keyframes monarchSpin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+  <!-- Outer triangle -->
+  <path class="monarch-logo" d="M32 4 L56 52 L8 52 Z" />
+  <!-- Inner hole (triangle) -->
+  <path d="M32 20 L44 40 L20 40 Z" fill="transparent" />
+</svg>
+

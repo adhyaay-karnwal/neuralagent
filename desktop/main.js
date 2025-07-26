@@ -146,26 +146,26 @@ ipcMain.handle('start-background-setup', async () => {
 ipcMain.handle('get-suggestions', async (_, baseURL) => {
   return new Promise((resolve, reject) => {
 
-    // const suggestor = spawn('./aiagent/venv/Scripts/python', ['./aiagent/suggestor.py'], {
-    //   env: {
-    //     NEURALAGENT_API_URL: baseURL,
-    //     NEURALAGENT_USER_ACCESS_TOKEN: store.get(constants.ACCESS_TOKEN_STORE_KEY),
-    //   },
-    // });
-
-    const isWindows = process.platform === 'win32';
-    const isMac = process.platform === 'darwin';
-
-    const suggestorPath = isDev
-    ? path.join(__dirname, 'agent_build', isWindows ? 'suggestor.exe' : 'suggestor')
-    : path.join(process.resourcesPath, isWindows ? 'suggestor.exe' : 'suggestor');
-
-    const suggestor = spawn(suggestorPath, [], {
+    const suggestor = spawn('./aiagent/venv/Scripts/python', ['./aiagent/suggestor.py'], {
       env: {
         NEURALAGENT_API_URL: baseURL,
         NEURALAGENT_USER_ACCESS_TOKEN: store.get(constants.ACCESS_TOKEN_STORE_KEY),
       },
     });
+
+    const isWindows = process.platform === 'win32';
+    const isMac = process.platform === 'darwin';
+
+    // const suggestorPath = isDev
+    // ? path.join(__dirname, 'agent_build', isWindows ? 'suggestor.exe' : 'suggestor')
+    // : path.join(process.resourcesPath, isWindows ? 'suggestor.exe' : 'suggestor');
+
+    // const suggestor = spawn(suggestorPath, [], {
+    //   env: {
+    //     NEURALAGENT_API_URL: baseURL,
+    //     NEURALAGENT_USER_ACCESS_TOKEN: store.get(constants.ACCESS_TOKEN_STORE_KEY),
+    //   },
+    // });
 
     let output = '';
     let errorOutput = '';

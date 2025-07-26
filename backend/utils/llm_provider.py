@@ -6,6 +6,7 @@ from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_aws import ChatBedrockConverse
 from langchain_anthropic import ChatAnthropic
 from langchain_ollama import ChatOllama
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.language_models.chat_models import BaseChatModel
 
 load_dotenv()  # Load env variables from .env
@@ -70,6 +71,13 @@ def get_llm(agent: str, temperature: float = 0.0, max_tokens: int = None, thinki
         return ChatOllama(
             model=model_id,
             temperature=temperature
+        )
+    
+    elif model_type == "gemini":
+        return ChatGoogleGenerativeAI(
+            model=model_id,
+            temperature=temperature,
+            max_tokens=max_tokens
         )
 
     elif model_type == "bedrock":

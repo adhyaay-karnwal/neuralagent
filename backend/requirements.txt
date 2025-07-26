@@ -24,6 +24,7 @@ langchain-anthropic
 anthropic
 langchain-ollama
 ollama
+langchain-google-genai
 youtube-transcript-api
 beautifulsoup4
 anthropic

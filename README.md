@@ -139,20 +139,23 @@ OPENAI_API_VERSION=2024-12-01-preview
 OPENAI_API_KEY=
 ANTHROPIC_API_KEY=
 
+# Optional: For Gemini
+GOOGLE_API_KEY=
+
 # Model config per agent
-CLASSIFIER_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama
+CLASSIFIER_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 CLASSIFIER_AGENT_MODEL_ID=gpt-4.1
 
-TITLE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama
+TITLE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 TITLE_AGENT_MODEL_ID=gpt-4.1-nano
 
-SUGGESTOR_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama
+SUGGESTOR_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 SUGGESTOR_AGENT_MODEL_ID=gpt-4.1-mini
 
-PLANNER_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama
+PLANNER_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 PLANNER_AGENT_MODEL_ID=gpt-4.1
 
-COMPUTER_USE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama
+COMPUTER_USE_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 COMPUTER_USE_AGENT_MODEL_ID=us.anthropic.claude-sonnet-4-20250514-v1:0
 
 # Internal use only by Neural for optional screenshot logging during training (off by default).
@@ -238,7 +241,7 @@ npm start
 
 ## 🤖 Agents & Model Providers
 
-You can configure different model providers (`OpenAI`, `Azure OpenAI`, `Anthropic`, `Bedrock`, `Ollama`) per agent in `.env`.  
+You can configure different model providers (`OpenAI`, `Azure OpenAI`, `Anthropic`, `Bedrock`, `Ollama`, `Gemini`) per agent in `.env`.  
 Agent types include:
 
 - `PLANNER_AGENT`

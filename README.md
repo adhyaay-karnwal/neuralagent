@@ -51,6 +51,32 @@ neuralagent/
 │   └── aiagent/          # Python code (pyautogui)
 └── README.md
 ```
+---
+
+# 🔧 Prerequisites
+
+Before running **NeuralAgent**, make sure the following dependencies are installed on your machine:
+
+| Tool              | Purpose                                           | Recommended Version |
+|-------------------|---------------------------------------------------|----------------------|
+| 🐍 **Python**       | Required for backend and local AI agent daemon   | `>= 3.9`              |
+| 🐘 **PostgreSQL**   | Relational database used by the backend          | `>= 13`               |
+| 🟦 **Node.js + npm** | Needed to run the Electron + React frontend      | `Node >= 18`, `npm >= 9` |
+
+---
+
+## 📥 Installation Guides
+
+- **Python**: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+- **PostgreSQL**: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+- **Node.js (includes npm)**: [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+---
+
+## ⚠️ OS Notes
+
+- NeuralAgent works on **Windows**, **macOS**, and **Linux**.
+- However, **background automation (browser control via WSL)** is **Windows-only** for now.
 
 ---
 

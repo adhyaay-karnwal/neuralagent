@@ -69,6 +69,7 @@ def get_llm(agent: str, temperature: float = 0.0, max_tokens: int = None, thinki
     
     elif model_type == "ollama":
         return ChatOllama(
+            base_url=os.getenv('OLLAMA_URL'),
             model=model_id,
             temperature=temperature
         )

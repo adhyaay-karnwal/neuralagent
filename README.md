@@ -142,6 +142,9 @@ ANTHROPIC_API_KEY=
 # Optional: For Gemini
 GOOGLE_API_KEY=
 
+# Needed if using Ollama, customize if needed
+OLLAMA_URL=http://127.0.0.1:11434
+
 # Model config per agent
 CLASSIFIER_AGENT_MODEL_TYPE=openai|azure_openai|anthropic|bedrock|ollama|gemini # Select one
 CLASSIFIER_AGENT_MODEL_ID=gpt-4.1

@@ -78,7 +78,7 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-3. **Create a local Postgres database.**
+3. **Create a local Postgres database. (You have to install Postgres on your computer)**
 
 4. **Copy `.env.example` to `.env` and fill in:**
 
